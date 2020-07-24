@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study2/book_list_page.dart';
+import 'package:flutter_study2/presentation/book_list/book_list_page.dart';
 import 'package:provider/provider.dart';
+
 import 'main_model.dart';
 
-void main() async {
-  runApp(MyApp());
-}
+void main() async => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
