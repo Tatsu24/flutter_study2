@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study2/presentation/book_list/book_list_page.dart';
+import 'package:flutter_study2/presentation/login/login_page.dart';
+import 'package:flutter_study2/presentation/signup/signup_page.dart';
 import 'package:provider/provider.dart';
 
 import 'main_model.dart';
@@ -28,19 +30,35 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   RaisedButton(
-                    child: Text('ボタン'),
+                    child: Text('ボタン押したら値が変わる'),
                     onPressed: () {
-                      // ボタン押した後の処理
                       model.changeText();
                     },
                   ),
                   RaisedButton(
-                    child: Text('次へ'),
+                    child: Text('firebaseのCRUD機能'),
                     onPressed: () {
-                      // ボタン押した後の処理
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => BookListPage()),
+                      );
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text('新規登録'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
+                      );
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text('ログイン'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
                       );
                     },
                   ),
